@@ -1,0 +1,53 @@
+/* Add the following to your style.css file */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    background-color: var(--white);
+    transition: background-color 0.3s ease;
+    z-index: 100;
+  }
+  
+  .menu-bar {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: var(--dark-grey);
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  .dropdown-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--dark-grey);
+  }
+  
+  .dropdown-btn:hover:after {
+    border-top-color: var(--primary-color);
+  }
+  
+  .dropdown {
+    position: absolute;
+  }
